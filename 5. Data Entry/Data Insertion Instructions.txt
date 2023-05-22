@@ -1,0 +1,13 @@
+Data Insertion:
+
+INSERT into <tablename> values(<val 1>,<val 2>…….,<val n>);
+
+Example:
+For 'mluser' table-
+
+INSERT into mluser values(100, Khalid, khalid@gmail.com);
+INSERT into mluser values(101, Rifat, rifat@gmail.com);
+INSERT into mluser values(102, Fahim, fahim@gmail.com);
+INSERT into mluser values(103, Towhidul, towhidul@gmail.com);
+
+**Execute all the queries to insert data into the table.
