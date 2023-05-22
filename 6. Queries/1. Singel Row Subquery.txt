@@ -1,0 +1,20 @@
+1) Show the track names with duration less than that of the track, 'Oniket Prantor'
+Query:
+
+SELECT t name, duration
+ FROM tracks
+  WHERE duration <
+                 (SELECT duration
+                   FROM tracks
+                    WHERE t name = 'Oniket Prantor');
+
+2) Show the album names and creation date that was created before t_id 345
+Query:
+
+SELECT album name, album date
+ FROM has
+  WHERE album date <
+                   (SELECT t _ date
+                     FROM tracks
+                      WHERE t _ id = 345);
+

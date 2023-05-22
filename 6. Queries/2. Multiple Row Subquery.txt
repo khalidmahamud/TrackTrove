@@ -1,0 +1,19 @@
+3) Show the track names that belongs to the same genre as g_id 2
+Query:
+
+SELECT t _ name
+ FROM tracks
+  WHERE t id = ANY
+                 (SELECT t_id
+                   FROM belongs
+                    WHERE g_id = 2);
+
+4) Show the user names who created a playlist after 10-apr-22
+Query:
+
+SELECT u name
+ FROM makes
+  WHERE p_id IN
+              (SELECT p_id
+                FROM playlist
+                 WHERE p_date > '1Ø-apr-22');
