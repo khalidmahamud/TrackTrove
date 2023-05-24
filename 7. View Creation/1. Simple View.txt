@@ -1,0 +1,15 @@
+#Create a view to show the artist names and nationality who are Bangladeshi.
+View Creation:
+
+CREATE VIEW artistvul as
+SELECT artist_name, nationality
+ FROM artist
+  WHERE nationality = ' Bangladeshi '
+  
+View Metadata:
+
+DESCRIBE artistvul;
+
+View Data:
+
+SELECT * FROM artistvul;

@@ -1,17 +1,17 @@
-3) Show the track names that belongs to the same genre as g_id 2
+3) Show the track names that belongs to the same genre as g_id 2.
 Query:
 
-SELECT t _ name
+SELECT t_name
  FROM tracks
-  WHERE t id = ANY
+  WHERE t_id = ANY
                  (SELECT t_id
                    FROM belongs
                     WHERE g_id = 2);
 
-4) Show the user names who created a playlist after 10-apr-22
+4) Show the user names who created a playlist after 10-apr-22.
 Query:
 
-SELECT u name
+SELECT u_name
  FROM makes
   WHERE p_id IN
               (SELECT p_id

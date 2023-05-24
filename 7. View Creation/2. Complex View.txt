@@ -1,0 +1,19 @@
+#Create a view to show the track name, genre name, album name and artist name
+View Creation:
+
+CREATE VIEW infovul as
+SELECT t.t_name, g.g_name, h.album_name, ar.artist_name
+ FROM tracks t, genre g, artist ar, belongs b, has h, composes c
+  WHERE t.t_id = b.t_id
+    AND g.g_id = b.g_id
+    AND t.t_id = h.t_id
+    AND t.t_id = c.t_id
+    AND c.artist_id = ar.artist_id;
+	
+View Metadata:
+
+DESCRIBE infovul;
+
+View Data:
+
+SELECT * FROM infovul;

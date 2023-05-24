@@ -1,0 +1,5 @@
+5) Show the minimum duration and the date of the last created track.
+Query:
+
+SELECT MIN(duration), MAX(t_date)
+ FROM tracks;

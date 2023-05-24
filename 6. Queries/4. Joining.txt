@@ -1,0 +1,18 @@
+Equijoin:
+6) Show the track name, track duration, album name, album creation date 
+with proper joining condition.
+Query:
+
+SELECT t. t_name, t.duration, h. album_name, h. album_date
+ FROM tracks t, has h
+  WHERE t.t_id = h.t_id;
+
+
+Outer Join:
+7) Show the track name, track creation date, genre name 
+with joining condition.
+Query:
+
+SELECT t.t_name, g.g_name, t.t_date
+ FROM tracks t, genre g, belongs b
+  WHERE t.t_id(+) = b.t_id AND g.g_id = b.g_id(+);
